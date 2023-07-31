@@ -1,0 +1,63 @@
+<body>
+  <!-- Login page -->
+  <div id="loginForm">
+    <h1>Teacher Login</h1>
+    <label for="teacherId">User ID:</label>
+    <input type="text" id="teacherId">
+    <label for="teacherPassword">Password:</label>
+    <input type="password" id="teacherPassword">
+    <button onclick="teacherLogin()">Login</button>
+  </div>
+
+  <!-- Teacher dashboard (hidden by default until login) -->
+  <div id="teacherDashboard" class="dashboard" style="display: none;">
+    <h2>Teacher Dashboard</h2>
+    <div class="thought">
+      <label for="date">Date:</label>
+      <input type="date" id="date">
+      <label for="thought">Thought for the day:</label>
+      <textarea id="thought" rows="3"></textarea>
+    </div>
+    <!-- Student details -->
+    <div id="studentDetails">
+      <!-- Student details will be populated here dynamically -->
+    </div>
+
+    <button onclick="submitAttendance()">Submit Attendance</button>
+  </div>
+
+  <!-- Student dashboard (hidden by default until login) -->
+  <div id="studentDashboard" class="dashboard" style="display: none;">
+    <h2>Student Dashboard</h2>
+    <p><strong>Name:</strong> <span id="studentName"></span></p>
+    <p><strong>Age:</strong> <span id="studentAge"></span></p>
+    <p><strong>Gender:</strong> <span id="studentGender"></span></p>
+    <table class="report" id="attendanceReport">
+      <thead>
+        <tr>
+          <th>Date</th>
+          <th>Attendance</th>
+        </tr>
+      </thead>
+      <tbody>
+        <!-- Attendance details will be populated here dynamically -->
+      </tbody>
+    </table>
+  </div>
+
+  <!-- Attendance summary report (hidden by default) -->
+  <div id="summaryReport" class="dashboard" style="display: none;">
+    <h2>Attendance Summary Report</h2>
+    <table class="report">
+      <thead>
+        <tr>
+          <th>Student Name</th>
+          <th>Total Present</th>
+          <th>Total Absent</th>
+        </tr>
+      </thead>
+      <tbody>
+        <!-- Summary data will be populated here dynamically -->
+      </tbody>
+    </table>
+  </div>
